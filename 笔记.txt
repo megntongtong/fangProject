@@ -1,0 +1,108 @@
+﻿1.float元素需要所在父类盒子指定宽度长度，否则会位置不固定，会根据浏览窗口大小改变
+
+2.为a指定背景图片只会根据指定的heght width截取，而不会缩小 而img会等比列缩小
+
+3.display;inline-block;  答案：行内块级元素
+？？？1.::before ::after 伪类
+
+	
+4.CSS盒子塌陷解决办法：a,给盒子指定宽高，b,给父盒子添加overflow属性 auto/hidden
+c,after伪类清除浮动
+#parent:after{
+	clear:both;
+	content:"";
+	width:0;
+	height:0;
+	display:block;
+	visibility:hidden;
+	}
+5.vertical-align:middle  会影响后面？？ 行内元素会 跟基线有关
+
+
+6.去掉输入框边框：border:none;  去掉焦点蓝色外边框 outline:none;
+
+placeholder="输入框默认文字"
+
+
+????? box-sizing???  输入框默认文字颜色
+7.padding:10px 5px 15px ;
+
+上填充10px
+左右5px
+下填充15px
+
+
+8.font-size: 0; 元素节点有文本节点
+js生成的则不带，如果不设置为0，会导致出现在动态页面两元素间距和静态页面显示不一致
+
+9.box-shadow:0 2px 2px 0 #ebebeb; 水平阴影位置 垂直阴影位置 模糊距离 阴影大小 阴影颜色
+
+10.解决ul塌陷  a：li不要设置float   要设置display:inline-block;
+
+
+11.span元素为内敛元素 如果要给其加一个确定的背景（要改变其宽高为auto），需要设置display:inline-block（block）在设置高度
+
+12.在css样式中 设置display:inline 则height属性不起作用。
+
+13.block会换行而inline-block则不会
+
+
+text-align？？？？
+
+
+14.主流开发前后端完全分离
+	以前后端穿过来数据包含html标签不是前后端分离
+
+15.前端开发又主张MVC、MVVC模式
+
+16.opacity:.6  不要加f
+
+17.div 设置宽高为100%有时也会塌陷 ???
+ 设置position :fixed	
+生成固定定位的元素，相对于浏览器窗口进行定位。
+
+元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+
+18.form input 里面有maxlength属性
+<input type="password" placeholder="请输入登录密码" maxlength="20">
+
+
+19.js
+(1)DOM 事件
+在js操作htmlDOM 分配事件：
+document.getElementById("loginBtn").onclick = function(){}
+
+html 分配事件:
+<script>
+	function clickLogin()
+	{
+
+	}
+</script>
+<button id = "loginBtn" onclick ="clickLogin">
+
+类似的事件还有onmouseover onmouseout
+			onmousehover onmousedown
+			onfocus 输入文字获得焦点   
+			onload  onunload  进入或离开界面 可以用于处理cookie 检测浏览器类型和浏览器版本
+(2)遍历
+
+
+20.  jquery DOM
+(1)jQuery事件
+jQuery是为事件处理特别设计的
+$("#loginBtn").click(function(){});		
+鼠标事件：click dbclick mouseenter mouseleave 
+		  mousedown mouseup hover
+
+键盘事件：keypress keydown keyup
+
+
+表单事件：submit change focus获取焦点 blur失去焦点
+
+文档或窗口事件：load unload resize scroll
+
+文档就绪事件 $(document).ready(function(){}); 
+			或者$(function(){});
+
+
