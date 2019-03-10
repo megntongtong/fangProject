@@ -100,9 +100,9 @@ $("#loginBtn").click(function(){});
 
 表单事件：submit change focus获取焦点 blur失去焦点
 
-文档或窗口事件：load unload resize scroll
+文档或窗口事 件：load unload resize scroll
 
 文档就绪事件 $(document).ready(function(){}); 
-			或者$(function(){});
+			  或者$(function(){})
 
 
